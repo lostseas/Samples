@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Samples";
+
+package Cat;
+
+service Cat {
+    rpc GetCatName (CatRequest) returns (CatReply);
+}
+
+// The request message containing the user's name.
+message CatRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message CatReply {
+  string message = 1;
+}
